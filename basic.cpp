@@ -1,13 +1,12 @@
 #include <iostream>
 using namespace std;
 
-// Function Definition
-void sayHello() {
-    cout << "Hello user!" << endl;
+void changeValue(int x) {
+    x = 100; // Changes only the copy
 }
 
 int main() {
-    sayHello(); // Calling the function
-    sayHello(); // Calling it again
-    return 0;
+    int num = 10;
+    changeValue(num);
+    cout << num; // Output: 10 (Original didn't change!)
 }
