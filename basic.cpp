@@ -3,10 +3,10 @@ using namespace std;
 
 int main() {
     
-
-    for(int i = 5 ; i<= 1000; i = i+5 ){
-        
-        cout << i << endl;
+    int i =5;
+    while(i<=100){
+        cout << i <<endl;
+        i = i +5;
     }
     return 0;
 }
