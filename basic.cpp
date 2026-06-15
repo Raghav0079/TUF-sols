@@ -2,9 +2,12 @@
 using namespace std;
 
 int main(){
-    int var ;
+    int var ,var2 ;
     cin >> var;
-    cout << var;
+    cin >> var2;
     
+    cout << var << endl;
+    cout << var2;
+
     return 0;
 }
