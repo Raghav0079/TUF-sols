@@ -1,12 +1,12 @@
 #include <iostream>
 using namespace std;
 
-void changeValue(int x) {
-    x = 100; // Changes only the copy
+void changeRealValue(int &x) { // Note the '&'
+    x = 100; // Changes the actual variable
 }
 
 int main() {
     int num = 10;
-    changeValue(num);
-    cout << num; // Output: 10 (Original didn't change!)
+    changeRealValue(num);
+    cout << num; // Output: 100 (It changed!)
 }
