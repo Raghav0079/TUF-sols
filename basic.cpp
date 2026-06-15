@@ -2,12 +2,10 @@
 using namespace std;
 
 int main(){
-    int var ,var2 ;
-    cin >> var;
-    cin >> var2;
+    string str;
+    getline(cin ,str);
+    cout << str;
     
-    cout << var << endl;
-    cout << var2;
 
     return 0;
 }
