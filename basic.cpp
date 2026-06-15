@@ -2,6 +2,8 @@
 using namespace std;
 
 int main(){
-    cout << "Hello world !" ;
+    int numInt = 10.7 ;
+    cout << numInt;
+
     return 0;
 }
