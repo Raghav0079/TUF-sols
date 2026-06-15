@@ -2,10 +2,10 @@
 using namespace std;
 
 int main() {
-    // Print "Hello" 5 times
-    for (int i = 1; i <= 5; i++) {
-        cout << "Hello" << endl;
+    int num ;
+
+    for(int i =1 ; i<=2 ; i++ ){
+        cin >> num;
+        cout << num << endl;
     }
-    
-    return 0;
 }
