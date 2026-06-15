@@ -3,10 +3,11 @@ using namespace std;
 
 int main() {
     
-    int i =5;
-    while(i<=100){
-        cout << i <<endl;
-        i = i +5;
-    }
+    int i = 60 ;
+    do{
+        cout << i << endl ;
+        i = i+5;
+    }while(i<=100);
+    
     return 0;
 }
