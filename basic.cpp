@@ -1,20 +1,30 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-
+/*
+given marks of a student 
+grade of the student 
+*/
 int main() {
-    int age;
-    cin >> age ;
+    int marks ;
+    cin >> marks ;
 
-    if (age >= 18){
-        cout << "Adult";
-    }
-    if ( age < 10 && age >= 10 ){
-        cout << "teen";
-    }
-    if(age < 10){
-        cout << "child";
-    }
+    if(marks >=90){
+        cout << "A";
 
-    return 0;
+    }
+    else if (marks >= 70){
+        cout << "B";
+
+    }
+    else if (marks >= 55){
+        cout << "C";
+    }
+    else if(marks >=35){
+        cout << "D";
+    }
+    else{
+        cout << "Fail";
+    }
+    
 }
