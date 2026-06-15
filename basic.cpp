@@ -1,6 +1,7 @@
 #include<bits/stdc++.h>
 
 
-void main(){
-    
+int main(){
+    std :: cout << "Hello!" ;
+    return 0;
 }
