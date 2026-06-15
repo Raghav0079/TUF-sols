@@ -6,25 +6,16 @@ given marks of a student
 grade of the student 
 */
 int main() {
-    int marks ;
-    cin >> marks ;
+    int a,b,c;
+    cin >> a >> b >> c;
 
-    if(marks >=90){
-        cout << "A";
-
-    }
-    else if (marks >= 70){
-        cout << "B";
-
-    }
-    else if (marks >= 55){
-        cout << "C";
-    }
-    else if(marks >=35){
-        cout << "D";
-    }
-    else{
-        cout << "Fail";
+    if(a>=b){
+        if(a>=c){
+            cout << " largest is A";
+        }
+        else{
+            cout << "largest is C";
+        }
     }
     
 }
