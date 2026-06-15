@@ -1,21 +1,22 @@
-#include<bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
-/*
-given marks of a student 
-grade of the student 
-*/
 int main() {
-    int a,b,c;
-    cin >> a >> b >> c;
+    int day = 3;
 
-    if(a>=b){
-        if(a>=c){
-            cout << " largest is A";
-        }
-        else{
-            cout << "largest is C";
-        }
+    switch (day) {
+        case 1:
+            cout << "Monday";
+            break;
+        case 2:
+            cout << "Tuesday";
+            break;
+        case 3:
+            cout << "Wednesday";
+            break;
+        default:
+            cout << "Invalid day";
     }
     
+    return 0;
 }
