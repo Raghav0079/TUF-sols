@@ -2,7 +2,9 @@
 using namespace std;
 
 int main(){
-    string str = "cpp";
-    cout << str;
+    int var ;
+    cin >> var;
+    cout << var;
+    
     return 0;
 }
