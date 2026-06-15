@@ -2,8 +2,11 @@
 using namespace std;
 
 int main(){
-    int numInt = 10.7 ;
-    cout << numInt;
+    // range -> (-10^9 , 10^9)  
 
+    int numInt = INT_MAX ;
+    cout << numInt << endl;
+
+    long long numLong = 10000000000000;
     return 0;
 }
