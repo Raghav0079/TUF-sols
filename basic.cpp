@@ -2,6 +2,7 @@
 
 
 int main(){
-    std :: cout << "Hello!" ;
+    std :: cout << "Hello world !" ;
     return 0;
 }
+
