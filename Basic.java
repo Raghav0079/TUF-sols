@@ -1,11 +1,14 @@
 
 class Basic{
     public static void main ( String[] args){
-int i = 0;
-do {
-    System.out.println(i); // Runs at least once
-    i++;
-} while (i < 5);
+try {
+    int[] myNumbers = {1, 2, 3};
+    System.out.println(myNumbers[10]); // Error
+} catch (Exception e) {
+    System.out.println("Something went wrong.");
+} finally {
+    System.out.println("The 'try catch' is finished.");
+}
 }
 
 }
