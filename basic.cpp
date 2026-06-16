@@ -1,12 +1,12 @@
 #include <iostream>
 using namespace std;
 
-void changeRealValue(int &x) { // Note the '&'
-    x = 100; // Changes the actual variable
-}
-
 int main() {
-    int num = 10;
-    changeRealValue(num);
-    cout << num; // Output: 100 (It changed!)
+    string str = "cppdsa";
+    int length = str.size();
+    for ( int i =0 ; i<= length-1 ; i++){
+        cout << str[i]
+    }
+    
+    return 0;
 }
