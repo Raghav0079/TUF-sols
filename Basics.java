@@ -1,7 +1,8 @@
 class Basics {
     public static void main(String[] args) {
-        System.out.println("hello!");
+        
+        int num = 100 ;
+        System.out.println(num);
         
     }
 }
-
