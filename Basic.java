@@ -1,14 +1,18 @@
+import java.util.Scanner;
 
 class Basic{
     public static void main ( String[] args){
-try {
-    int[] myNumbers = {1, 2, 3};
-    System.out.println(myNumbers[10]); // Error
-} catch (Exception e) {
-    System.out.println("Something went wrong.");
-} finally {
-    System.out.println("The 'try catch' is finished.");
-}
-}
+        Scanner scanner = new Scanner(System.in);
+
+        int age = scanner.nextInt();
+
+        if(age >=18){
+            System.out.println("Adult");
+        }
+        else{
+            System.out.println("teen");
+        }
+        scanner.close();
+    }
 
 }
