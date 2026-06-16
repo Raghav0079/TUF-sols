@@ -32,7 +32,7 @@
             },
             "group": {
                 "kind": "build",
-                "isDefault": false
+                "isDefault": true
             },
             "problemMatcher": {
                 "owner": "cpp",
@@ -50,40 +50,7 @@
                 }
             }
         },
-        {
-            "label": "Compile and run Java",
-            "type": "shell",
-            "command": "",
-            "args": [
-                "copy",
-                "\"${file}\"",
-                "${workspaceFolder}\\jspwTest.java",
-                "&&",
-                "javac",
-                "jspwTest.java",
-                "&&",
-                "java",
-                "jspwTest",
-                "<",
-                "input.txt",
-                ">",
-                "output.txt",
-                "&&",
-                "del",
-                "jspwTest.class",
-                "&&",
-                "del",
-                "jspwTest.java"
-            ],
-            "presentation": {
-                "reveal": "always"
-            },
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            },
-            "problemMatcher": []
-        },
+
         {
             "type": "cppbuild",
             "label": "C/C++: g++.exe build active file",
