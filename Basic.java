@@ -1,17 +1,21 @@
 
 class Basic{
     public static void main ( String[] args){
+        int day = 3;
+switch (day) {
+    case 1:
+        System.out.println("Monday");
+        break;
+    case 2:
+        System.out.println("Tuesday");
+        break;
 
-        int marks = 8;
-if (marks > 90) {
-    System.out.println("A");
-} else if (marks > 80) {
-    System.out.println("B");
-} else {
-    System.out.println("C");
+    
+
+    default:
+        System.out.println("Invalid");
 }
-        
-        
+
 
     }
 }
