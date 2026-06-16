@@ -4,13 +4,11 @@ class Basic{
     public static void main ( String[] args){
         Scanner scanner = new Scanner(System.in);
 
-        int age = scanner.nextInt();
+        int i =2;
 
-        if(age >=18){
-            System.out.println("Adult");
-        }
-        else{
-            System.out.println("teen");
+        while(i <= 50){
+            System.out.println(i);
+            i = i +2 ;
         }
         scanner.close();
     }
