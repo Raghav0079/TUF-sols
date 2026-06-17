@@ -1,17 +1,17 @@
 
 class Test{
-    int age ;
-    public void assignAge(int num1, int num2){
-        return num1 + num2 ;
+    public Test(){
+        System.out.println("test constructor");
+    }
+    public void printHello(){
+        System.out.println("hello");
     }
 }
+    
 
 class Basic{
-    private static int sum(){
-        return 10;
-    }
-    public static void main(String[] args){
-        Test test = Test();
-        System.out.println(test.sum(num1:10 , num2:20));
-    }
+   public static void main(String[] args) {
+       Test test = new Test();
+       test.printHello();
+   }
 }
