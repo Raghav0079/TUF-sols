@@ -7,6 +7,9 @@ class Test{
 }
 
 class Basic{
+    private void print(){
+        System.out.println("print called");
+    }
     public static void main(String[] args){
         Test test1 = new Test();
         test1.assignAge(num:10);
