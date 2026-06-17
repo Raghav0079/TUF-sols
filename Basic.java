@@ -1,17 +1,43 @@
+class Vehicle{
 
-class Test{
-    public Test(){
-        System.out.println("test constructor");
+    String numberOfVehicle;
+    public Vehicle(String numberOfVehicle){
+        this.numberOfVehicle=numberOfVehicle;
     }
-    public void printHello(){
-        System.out.println("hello");
+
+    public void honk(){
+        System.out.println("honk");
+
+    }
+
+    public void NumberOfVehicle(){
+        System.out.println(numberOfCar);
     }
 }
-    
 
+
+class Car extends Vehicle{
+    
+    public Car(String numberOfCar){
+        super(numberOfCar);
+    }
+    
+}
+
+class Bus extends Vehicle{
+    public Bus(String numberOfBus){
+        super(numberOfBus);
+    }
+}
 class Basic{
-   public static void main(String[] args) {
-       Test test = new Test();
-       test.printHello();
-   }
+    public static void main(String[] args){
+        Car car = new Car(numberOfCar:"MP095645");
+        car.printCarNumber();
+        car.honk();
+
+        Bus bus = new Bus(numberOfBus:"MP085645");
+        bus.printBusnumber();
+        bus.honk();
+    }
+
 }
