@@ -1,48 +1,14 @@
 {
     "version": "2.0.0",
     "tasks": [
-
         {
-            "label": "Compile and run C++",
-            "type": "shell",
-            "command": "cmd",
-            "args": [
-                "/c",
-                "copy",
-                "\"${file}\"",
-                "jspwTest.cpp",
-                "&&",
-                "g++",
-                "jspwTest.cpp",
-                "-o",
-                "jspwTest",
-                "&&",
-                "jspwTest",
-                "<",
-                "input.txt",
-                ">",
-                "output.txt",
-                "&&",
-                "del",
-                "jspwTest.exe",
-                "&&",
-                "del",
-                "jspwTest.cpp"
-            ],
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            }
-        },
-
-        {
-            "label": "Compile and run Java",
+            "label": "Compile and Run Java",
             "type": "shell",
             "command": "cmd",
             "args": [
                 "/c",
                 "javac",
-                "${file}",
+                "${fileBasename}",
                 "&&",
                 "java",
                 "${fileBasenameNoExtension}",
@@ -51,8 +17,16 @@
                 ">",
                 "output.txt"
             ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
             "presentation": {
-                "reveal": "always"
+                "reveal": "always",
+                "panel": "shared"
             }
         }
     ]
