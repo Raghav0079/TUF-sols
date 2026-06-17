@@ -1,24 +1,17 @@
 
 class Test{
     int age ;
-    public void assignAge(int num){
-        age =num ;
+    public void assignAge(int num1, int num2){
+        return num1 + num2 ;
     }
 }
 
 class Basic{
-    private void print(){
-        System.out.println("print called");
+    private static int sum(){
+        return 10;
     }
     public static void main(String[] args){
-        Test test1 = new Test();
-        test1.assignAge(num:10);
-
-
-        Test test2 = new Test();
-        test2.assignAge(num:19);
-
-        System.out.println(test1.age);
-        System.out.println(test2.age);
+        Test test = Test();
+        System.out.println(test.sum(num1:10 , num2:20));
     }
 }
