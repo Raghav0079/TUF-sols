@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 class Test{
     public static void printTest(){
         System.out.println("hello");
@@ -6,6 +8,8 @@ class Test{
 
 class Basic{
     public static void main(String[] args){
-        Test.printTest();
+        Scanner sc = new Scanner(System.in);
+        Test test = new Test();
+        test.printTest();
     }
 }
