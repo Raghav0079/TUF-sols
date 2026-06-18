@@ -1,37 +1,19 @@
 {
-    "version": "2.0.0",
-    "tasks": [
-        {
-            "label": "Compile and run C++",
-            "type": "shell",
-            "command": "cmd",
-            "args": [
-                "/c",
-                "copy",
-                "\"${file}\"",
-                "jspwTest.cpp",
-                "&&",
-                "g++",
-                "jspwTest.cpp",
-                "-o",
-                "jspwTest",
-                "&&",
-                "jspwTest",
-                "<",
-                "input.txt",
-                ">",
-                "output.txt",
-                "&&",
-                "del",
-                "jspwTest.exe",
-                "&&",
-                "del",
-                "jspwTest.cpp"
-            ],
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            }
-        }
-    ]
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Compile and Run C++ (I/O Redirection)",
+      "type": "shell",
+      "command": "g++ -std=c++17 \"${file}\" -o \"${fileDirname}\\${fileBasenameNoExtension}.exe\" && \"${fileDirname}\\${fileBasenameNoExtension}.exe\" < \"${fileDirname}\\input.txt\" > \"${fileDirname}\\output.txt\"",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      },
+      "problemMatcher": ["$gcc"]
+    }
+  ]
 }
