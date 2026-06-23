@@ -21,6 +21,17 @@ void explainset(){
 
 }
 
+void explainmultiset(){
+    multiset<int> ms ;
+    ms.insert(1);
+    ms.insert(1);
+    ms.insert(1);
+    ms.insert(111);
+    ms.insert(1);
+    ms.insert(12);
+
+    auto it = ms.find(1);
+}
 int main(){
     explainset();
     return 0 ;
