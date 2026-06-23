@@ -14,16 +14,9 @@ void explainset(){
     }
     cout << endl ;
 
-    auto it1 = st.begin();
-    it1++;
-
-    auto it2 = st.end();
-    it2--;
-
-    st.erase(it1,it2);
-
-    for(auto it:st){
-        cout << it << " ";
+    auto it = st.upper_bound(11);
+    if(it == st.end()){
+        cout << "end";
     }
 
 }
