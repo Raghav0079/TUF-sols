@@ -9,8 +9,9 @@ void explainset(){
     st.insert(2);
     st.insert(2);
 
-    for ( auto it : st){
-        cout << it << " ";
+    auto it = st.find(121);
+    if (it != st.end()){
+        cout << *it ;
     } 
 }
 
