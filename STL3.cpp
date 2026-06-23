@@ -13,7 +13,7 @@ void explainPair(){
 }
 
 void explainVector(){
-    vector<int> vec(5);
+    vector<int> vec = {7,8};
     vec.push_back(1);
     vec.push_back(2);
     vec.push_back(0);
