@@ -9,10 +9,7 @@ void explainset(){
     st.insert(2);
     st.insert(2);
 
-    auto it = st.find(121);
-    if (it != st.end()){
-        cout << *it ;
-    } 
+    cout << st.count(12); 
 }
 
 int main(){
