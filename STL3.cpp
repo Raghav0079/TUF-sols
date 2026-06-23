@@ -22,6 +22,16 @@ void explainVector(){
     for( int i =0 ; i<vec.size();i++){
         cout << vec[i] << " ";
     }
+    cout << endl;
+
+    vector<int>::iterator beginItr = vec.begin();
+    vector<int>::iterator endItr = vec.end();
+
+    for(vector<int>::iterator i = beginItr ; i<endItr;i++){
+        cout << *i << " ";
+    }
+
+
 }
 
 int main(){
