@@ -1,7 +1,12 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+void explainPair(){
+    pair<int,int>pr1={2,8};
+    cout << pr1.first << " " << pr1.second << endl ;
+}
+
 int main(){
-    cout << pow(2,9);
+    explainPair();
     return 0;
 }
