@@ -9,8 +9,14 @@ void explainsort(){
     }
 }
 
+void explainaccumulate(){
+    int arr [5] = {1,4,8,12,56};
+    int sum =0 ;
+    cout << accumulate(arr , arr +5 ,5);
+    
 
+}
 int main(){
-    explainsort(); 
+    explainaccumulate(); 
     return 0;
 }
