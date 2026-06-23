@@ -30,7 +30,11 @@ void explainmultiset(){
     ms.insert(1);
     ms.insert(12);
 
-    auto it = ms.find(1);
+    auto it = ms.erase(ms.find(1));
+
+    for(auto it:ms){
+        cout << it << " ";
+    }
 }
 int main(){
     explainset();
