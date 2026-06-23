@@ -1,9 +1,5 @@
-#include <iostream>
-#include <map>
-#include <string>
-
+#include <bits/stdc++.h>
 using namespace std;
-
 
 void printMap() { 
     map<int, string> mpp; 
@@ -11,9 +7,8 @@ void printMap() {
     mpp[2] = "bcd";
     mpp.insert({4, "rst"});
     
-    for (auto it : mpp) {
-        cout << it.first << "->" << it.second << endl;
-    }
+    auto it = mpp.find(4); // Fixed missing '='
+    cout << it->first << "->" << it->second << endl; // Fixed operator and member access
 }
 
 int main() {
