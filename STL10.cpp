@@ -8,7 +8,6 @@ void explainsort(){
         cout << arr[i] << " ";
     }
 }
-
 void explainaccumulate(){
     int arr [5] = {1,4,8,12,56};
     int sum =0 ;
@@ -16,7 +15,13 @@ void explainaccumulate(){
     
 
 }
+void explaincount(){
+    int arr [5] = {1,4,8,12,56};
+    int num = 1 ;
+    cout << count(arr,arr+5,num);
+
+}
 int main(){
-    explainaccumulate(); 
+    explaincount(); 
     return 0;
 }
