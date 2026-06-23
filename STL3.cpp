@@ -19,20 +19,12 @@ void explainVector(){
     vec.push_back(0);
     vec.emplace_back(10);
 
-    for( int i =0 ; i<vec.size();i++){
-        cout << vec[i] << " ";
+    auto revBegin = vec.rbegin();
+    auto revEnd = vec.rend();
+
+    for(auto i = revBegin ; i < revEnd ; i++){
+        cout << *i << " ";
     }
-    cout << endl;
-
-    auto beginItr = vec.begin();
-    auto endItr = vec.end();
-    endItr = endItr - 1 ;
-
-    for(auto i : vec){
-        cout << i << " ";
-    }
-    cout << endl ;
-
 
 }
 
