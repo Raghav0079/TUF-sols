@@ -28,9 +28,10 @@ void explainVector(){
     auto endItr = vec.end();
     endItr = endItr - 1 ;
 
-    for(auto i = beginItr ; i<endItr;i++){
-        cout << *i << " ";
+    for(auto i : vec){
+        cout << i << " ";
     }
+    cout << endl ;
 
 
 }
