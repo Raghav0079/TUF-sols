@@ -2,7 +2,7 @@
 using namespace std;
 
 void explainPair(){
-    pair<int,int>pr1={2,8};
+    pair<int,int>pr1= make_pair(2,8);
     cout << pr1.first << " " << pr1.second << endl ;
 }
 
