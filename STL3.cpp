@@ -19,9 +19,10 @@ void explainVector(){
     vec.push_back(0);
     vec.emplace_back(10);
 
-    for ( auto i : vec){
-        cout << i << " ";
-    }
+    cout << vec.front();
+    
+
+   
 
 }
 
