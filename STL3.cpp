@@ -13,17 +13,14 @@ void explainPair(){
 }
 
 void explainVector(){
-    vector<int> vec ;
+    vector<int> vec(5);
     vec.push_back(1);
     vec.push_back(2);
     vec.push_back(0);
     vec.emplace_back(10);
 
-    auto revBegin = vec.rbegin();
-    auto revEnd = vec.rend();
-
-    for(auto i = revBegin ; i < revEnd ; i++){
-        cout << *i << " ";
+    for ( auto i : vec){
+        cout << i << " ";
     }
 
 }
