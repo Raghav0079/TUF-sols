@@ -30,7 +30,13 @@ void explainfind(){
 
     }
 }
+void explainextpermutation(){
+    string str = "abc";
+    do{
+        cout << str << endl ;
+    }while(next_permutation(str.begin() , str.end()));
+}
 int main(){
-    explaincount(); 
+    explainextpermutation(); 
     return 0;
 }
