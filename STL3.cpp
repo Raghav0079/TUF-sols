@@ -19,11 +19,17 @@ void explainVector(){
     vec.push_back(0);
     vec.emplace_back(10);
 
-    cout << vec.front();
-    
+    for (auto it : vec){
+        cout << it << " ";
+    }
 
-   
+    cout << endl;
 
+    vec.erase(vec.begin() +1 , vec.end() -1);
+
+    for(auto it : vec){
+        cout << it << " ";
+    }
 }
 
 int main(){
