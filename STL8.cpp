@@ -9,13 +9,23 @@ void explainset(){
     st.insert(2);
     st.insert(2);
 
-
-    auto it = st.end();
-    it--; it --;
-    st.erase(21);
     for ( auto it : st) {
         cout << it << " ";
     }
+    cout << endl ;
+
+    auto it1 = st.begin();
+    it1++;
+
+    auto it2 = st.end();
+    it2--;
+
+    st.erase(it1,it2);
+
+    for(auto it:st){
+        cout << it << " ";
+    }
+
 }
 
 int main(){
