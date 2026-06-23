@@ -20,8 +20,9 @@ void explainset(){
     }
 
 }
-
 void explainmultiset(){
+
+
     multiset<int> ms ;
     ms.insert(1);
     ms.insert(1);
@@ -30,13 +31,22 @@ void explainmultiset(){
     ms.insert(1);
     ms.insert(12);
 
-    auto it = ms.erase(ms.find(1));
+    ms.count(1);
+}
+void uset(){
+    unordered_set<int> st;
+    st.insert(1);
+    st.insert(1);
+    st.insert(1);
+    st.insert(1);
 
-    for(auto it:ms){
+    for ( auto it : st){
         cout << it << " ";
     }
+    
 }
+
 int main(){
-    explainset();
+    uset();
     return 0 ;
 }
