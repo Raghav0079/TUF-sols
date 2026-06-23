@@ -24,10 +24,11 @@ void explainVector(){
     }
     cout << endl;
 
-    vector<int>::iterator beginItr = vec.begin();
-    vector<int>::iterator endItr = vec.end();
+    auto beginItr = vec.begin();
+    auto endItr = vec.end();
+    endItr = endItr - 1 ;
 
-    for(vector<int>::iterator i = beginItr ; i<endItr;i++){
+    for(auto i = beginItr ; i<endItr;i++){
         cout << *i << " ";
     }
 
