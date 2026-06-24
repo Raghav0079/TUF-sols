@@ -1,5 +1,8 @@
 
-import java.util.*;
+import java.util.Deque;
+import java.util.LinkedList;
+
+
 
 class Data{
     public Integer num ;
@@ -15,17 +18,14 @@ class Data{
 
 public class basics{
     public static void main (String [] args){
-        ArrayList<Data> aList = new ArrayList <> () ;
-        aList.add(e:10);
-        aList.add(e:16);
-        aList.add(e:18);
-        aList.add(e:20);
-        System.out.println(aList);
-        System.out.println(aList.size());
-        System.out.println(aList.remove(index:2));
-        aList.add(index:1 , element :17);
-        System.out.println(aList);
-        System.out.println(aList.contains(o:170));
+        LinkedList<Integer> ll = new Linkedlist <> () ;
+        ll.add (e:1);
+        ll.add(e:2);
+        ll.addFirst(e:3);
+        ll.addList(e:6);
+        System.out.println(ll);
+        ll.removeLast();
+        System.out.println(ll);
 
     }
 }
