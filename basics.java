@@ -3,6 +3,7 @@ import java.util.ArrayDeque;
 import java.util.Deque;
 import java.util.HashSet;
 import java.util.LinkedList;
+import java.util.PriorityQueue;
 
 
 
@@ -20,12 +21,16 @@ class Data{
 
 public class basics{
     public static void main (String [] args){
-        ArrayDeque<Integer> ad = new ArrayDeque<>();
-        ad.offer(2);
-        ad.offer(5);
-        System.err.println(ad);
-        ad.poll();
-        System.out.println(ad.peek());
-        System.out.print(ad.size());
+        PriorityQueue<Integer> pq = new PriorityQueue<>();
+        pq.offer(1);
+        pq.offer(2);
+
+        System.out.println(pq.peek());
+        pq.pull();
+        System.out.println(pq.peek());
+        pq.pull();
+        System.out.println(pq.peek());
+
+
 
 }
