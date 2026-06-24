@@ -23,6 +23,9 @@ public class basics{
         System.out.println(aList);
         System.out.println(aList.size());
         System.out.println(aList.remove(index:2));
+        aList.add(index:1 , element :17);
         System.out.println(aList);
+        System.out.println(aList.contains(o:170));
+
     }
 }
