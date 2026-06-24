@@ -1,4 +1,5 @@
 
+import java.util.ArrayDeque;
 import java.util.Deque;
 import java.util.HashSet;
 import java.util.LinkedList;
@@ -19,12 +20,12 @@ class Data{
 
 public class basics{
     public static void main (String [] args){
-        TreeSet<Integer> new TreeSet<>();
-        ts.add(e:1);
-        ts.add(e:2);
-        ts.add(-1);
-        System.out.println(ts);
-        System.out.println(ts.floor(e:4));
-        System.out.println(ts.ceiling(e:8))
-    }
+        ArrayDeque<Integer> ad = new ArrayDeque<>();
+        ad.offer(2);
+        ad.offer(5);
+        System.err.println(ad);
+        ad.poll();
+        System.out.println(ad.peek());
+        System.out.print(ad.size());
+
 }
