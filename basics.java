@@ -1,6 +1,7 @@
 
 import java.util.ArrayDeque;
 import java.util.Deque;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.PriorityQueue;
@@ -21,16 +22,9 @@ class Data{
 
 public class basics{
     public static void main (String [] args){
-        PriorityQueue<Integer> pq = new PriorityQueue<>();
-        pq.offer(1);
-        pq.offer(2);
-
-        System.out.println(pq.peek());
-        pq.pull();
-        System.out.println(pq.peek());
-        pq.pull();
-        System.out.println(pq.peek());
-
-
+        HashMap<Integer , String> mp = new HashMap<>();
+        mp.put(key:1 , value : "abc");
+        mp.put(key:2 , value : "xyz");
+        System.outprintln(mp.get(3));
 
 }
