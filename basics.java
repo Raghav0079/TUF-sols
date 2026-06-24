@@ -1,11 +1,4 @@
 
-import java.util.ArrayDeque;
-import java.util.ArrayList;
-import java.util.Deque;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.PriorityQueue;
 
 
 
@@ -22,15 +15,11 @@ class Data{
 
 public class basics{
     public static void main (String [] args){
-        ArrayList<Integer> al = ArrayList<>();
-        al.add(e:1);
-        al.add(e:5);
-
-
-        Iterator<Integer> iterator = al.iterator();
-        while(iterator , hasNext()){
-            Integer num = iterator.next();
-            System.out.println(num);
-        }
+        List<Integer> list = new ArrayList<>();
+        list.add(3);
+        list.add(1);
+        list.add(2);
+        Collections.sort(list);
+        System.out.println(list); // Output: [1, 2, 3]
     }
 }
