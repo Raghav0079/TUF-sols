@@ -1,5 +1,6 @@
 
 import java.util.ArrayDeque;
+import java.util.ArrayList;
 import java.util.Deque;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -17,15 +18,18 @@ class Data{
         this.name = _name ;
     }
     
-
 }
 
 public class basics{
     public static void main (String [] args){
-        TreeMap<Integer , String> mp = new TreeMap<>();
-        mp.put(key:1 , value : "abc");
-        mp.put(key:2 , value : "xyz");
-        System.out.println(mp);
-        System.outprintln(mp.ceilingKey(key:2));
-        Set<Integer>mp.keySet();
+        ArrayList<Integer> al = ArrayList<>();
+        al.add(e:1);
+        al.add(e:5);
+
+
+        Iterator<Integer> iterator = al.iterator();
+        while(iterator , hasNext()){
+            Integer num = iterator.next();
+            System.out.println(num);
+        }
 }
