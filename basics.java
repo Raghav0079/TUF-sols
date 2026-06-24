@@ -15,7 +15,7 @@ class Data{
 
 public class basics{
     public static void main (String [] args){
-        int index = Collections.binarySearch(list, 2);
-        System.out.println(index);
+        double result = Math.pow(2, 3);
+        System.out.println(result);
     }
 }
