@@ -18,14 +18,12 @@ class Data{
 
 public class basics{
     public static void main (String [] args){
-        LinkedList<Integer> ll = new Linkedlist <> () ;
-        ll.add (e:1);
-        ll.add(e:2);
-        ll.addFirst(e:3);
-        ll.addList(e:6);
-        System.out.println(ll);
-        ll.removeLast();
-        System.out.println(ll);
+        Stack<Integer> st = new Stack ;
+        st.push(item:2);
+        st.push(item:30);
+        st.push(item:15);
+        System.out.println(st);
+        System.out.print(st.peek());
 
     }
 }
