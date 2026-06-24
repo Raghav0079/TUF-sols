@@ -25,4 +25,9 @@ public class basics{
         hs.add(e:1);
         hs.add(0);
         System.out.println(hs);
+        hs.remove(2);
+        for ( var num : hs){
+            System.out.println(num);
+        }
+    }
 }
