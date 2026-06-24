@@ -15,7 +15,7 @@ class Data{
 
 public class basics{
     public static void main (String [] args){
-        int frequency = Collections.frequency(list, 2);
-        System.out.println(frequency);
+        int index = Collections.binarySearch(list, 2);
+        System.out.println(index);
     }
 }
