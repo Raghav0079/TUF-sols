@@ -19,7 +19,7 @@ public class basics{
         list.add(3);
         list.add(1);
         list.add(2);
-        Collections.sort(list);
-        System.out.println(list); // Output: [1, 2, 3]
+        int max = Collections.max(list);
+        System.out.println(max); // Output: 3// Output: [1, 2, 3]
     }
 }
