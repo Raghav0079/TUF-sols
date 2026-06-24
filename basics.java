@@ -19,15 +19,11 @@ class Data{
 
 public class basics{
     public static void main (String [] args){
-        HashSet<Integer> hs = new HashSet<>();
-        hs.add(e:1);
-        hs.add(e:2);
-        hs.add(e:1);
-        hs.add(0);
-        System.out.println(hs);
-        hs.remove(2);
-        for ( var num : hs){
-            System.out.println(num);
+        TreeSet<Integer> new TreeSet<>();
+        ts.add(e:1);
+        ts.add(e:2);
+        ts.add(-1);
+        System.out.println(ts);
         }
     }
 }
