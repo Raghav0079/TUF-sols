@@ -18,12 +18,6 @@ class Data{
 
 public class basics{
     public static void main (String [] args){
-        Stack<Integer> st = new Stack ;
-        st.push(item:2);
-        st.push(item:30);
-        st.push(item:15);
-        System.out.println(st);
-        System.out.print(st.peek());
-        st.isEmpty();
-    }
+        Vector<Integer> vec =- new Vector<>();
+        vec.capacity();
 }
