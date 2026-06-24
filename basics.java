@@ -22,9 +22,10 @@ class Data{
 
 public class basics{
     public static void main (String [] args){
-        HashMap<Integer , String> mp = new HashMap<>();
+        TreeMap<Integer , String> mp = new TreeMap<>();
         mp.put(key:1 , value : "abc");
         mp.put(key:2 , value : "xyz");
-        System.outprintln(mp.get(3));
-
+        System.out.println(mp);
+        System.outprintln(mp.ceilingKey(key:2));
+        Set<Integer>mp.keySet();
 }
