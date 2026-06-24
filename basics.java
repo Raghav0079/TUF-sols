@@ -32,4 +32,5 @@ public class basics{
             Integer num = iterator.next();
             System.out.println(num);
         }
+    }
 }
