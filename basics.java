@@ -24,6 +24,6 @@ public class basics{
         st.push(item:15);
         System.out.println(st);
         System.out.print(st.peek());
-
+        st.isEmpty();
     }
 }
