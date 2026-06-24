@@ -1,9 +1,12 @@
 class Data{
     private Integer num ;
     private String name ;
+    private InternalData internalData ;
+
     Data(int _num , String _name){
         this.num = _num ;
         this.name = _name ;
+        this.internalData= new InternalData(_revenue : 10000);
     }
     public void setNum(Integer _num){
         this.num = _num ;
@@ -21,7 +24,12 @@ class Data{
     }
 }
 
-
+class InternalData{
+    public Integer revenue ;
+    InternalData(Integer _revenue){
+        this.revenue = -revenue;
+    }
+}
 public class basics{
     public static void main (String [] args){
         Data dataObj1 = new Data(_num:9 , _name : "abc");
