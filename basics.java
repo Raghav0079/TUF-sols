@@ -14,8 +14,10 @@ class Data{
 }
 
 public class basics{
-    public static void main (String [] args){
-        double result = Math.pow(2, 3);
-        System.out.println(result);
+    Collections.sort(people, new Comparator<Person>() {
+    @Override
+    public int compare(Person p1, Person p2) {
+        return p1.age - p2.age;
     }
+});
 }
