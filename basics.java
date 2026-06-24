@@ -24,6 +24,7 @@ public class basics{
         ts.add(e:2);
         ts.add(-1);
         System.out.println(ts);
-        }
+        System.out.println(ts.floor(e:4));
+        System.out.println(ts.ceiling(e:8))
     }
 }
