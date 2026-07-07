@@ -9,6 +9,9 @@ class School{
         System.out.println("School name: " + name);
 
     }
+    void demo(){
+        System.out.println(x:"demo of school");
+    }
 }
 
 class Student extends School {
@@ -21,30 +24,19 @@ class Student extends School {
         System.out.println("Student name:" + name);
 
     }
+    void demo(){
+        System.out.println(x:"demo of student");
+    }
 
 }
 
 
-class Teacher extends School{
-    private String name;
-    private String subjectName;
 
-    Teacher(String name , String subjectName){
-        this.name = name ;
-        this.subjectName = subjectName; 
-
-    }
-    void printTeacherInfo(){
-        System.out.println("Name : " + name);
-        System.out.println("Subject name :" + subjectName);
-    }
-} 
 public class Main{
     public static void main(String[] args) {
-        Parent parent = new Parent (name : "dad" , studentName : "abs");
-        parent.printParentName();
-        parent.printStudentName();
-        parent.printSchoolName();
+        Student student = new Student (name : "abs");
+        student.printStudentname();
+        student.demo();
         
     }
 }
