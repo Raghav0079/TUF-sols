@@ -14,7 +14,22 @@ class School{
     }
 }
 
-class Student extends School {
+class School1{
+    private String name;
+    School(String name){
+        this.name = name;
+
+    }
+    void printSchoolName(){
+        System.out.println("School name: " + name);
+
+    }
+    void demo(){
+        System.out.println(x:"demo of school");
+    }
+}
+
+class Student extends School  {
     private String name ; 
     Student(String name){
         super(name : "dps");
