@@ -27,7 +27,7 @@ class Student extends School {
 
 class Teacher extends School{
     private String name;
-    private String name;
+    private String subjectName;
 
     Teacher(String name , String subjectName){
         this.name = name ;
@@ -45,5 +45,6 @@ public class Main{
         parent.printParentName();
         parent.printStudentName();
         parent.printSchoolName();
+        
     }
 }
