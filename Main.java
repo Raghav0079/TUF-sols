@@ -24,6 +24,7 @@ class Student extends School {
         System.out.println("Student name:" + name);
 
     }
+    Override
     void demo(){
         System.out.println(x:"demo of student");
     }
