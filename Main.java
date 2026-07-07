@@ -1,41 +1,39 @@
 class School {
-    private String name;
+    private String schoolName; // Renamed to avoid confusion with student's name
 
-    // Constructor
     School() {
-        name = "DPS";
+        schoolName = "DPS";
     }
 
     void printSchoolName() {
-        System.out.println("School name: " + name);
+        System.out.println("School name: " + schoolName);
     }
 }
 
-class Student {
-    private String name;
+class Student extends School {
+    private String studentName;
 
-    // Parameterized Constructor
     Student(String name) {
-        this.name = name;
+        // Java automatically calls super() here to run School's constructor
+        this.studentName = name;
     }
 
-    void printStudentName() { // Fixed a minor typo in method name capitalization
-        System.out.println("Student name: " + name);
+    void printStudentName() { 
+        System.out.println("Student name: " + studentName);
+    }
+    
+    
+    void printStudentDetails() {
+        printStudentName();  // Student's own method
+        printSchoolName();   // Inherited from School class!
     }
 }
 
 public class Main {
     public static void main(String[] args) {
-        // 1. Create an object of the School class
-        School mySchool = new School();
-        // Call the method to print the school name
-        mySchool.printSchoolName();
-
-        System.out.println("--------------------"); // Visual separator
-
-        // 2. Create an object of the Student class (passing the name to the constructor)
         Student myStudent = new Student("John Doe");
-        // Call the method to print the student name
-        myStudent.printStudentName();
+        
+        // This will print both the student name and the school they inherited
+        myStudent.printStudentDetails();
     }
 }
