@@ -26,8 +26,9 @@ class Student extends School {
         System.out.println("Student name:" + name);
 
     }
-    @Override
-    void demo(){
+    
+
+    void demo(String age){  // method overloading 
         super.demo();
         System.out.println(x:"demo of student");
     }
@@ -40,8 +41,8 @@ public class Main{
     public static void main(String[] args) {
         Student student = new Student (name : "abs");
         student.printStudentname();
-        student.demo();
-        student.printSchoolName();
+        student.demo(age: 198);
+        student.demo(age : "18");
         
     }
 }
