@@ -13,6 +13,11 @@ class Calculator{
 
 
 Class Parent{
+
+    static void print(){
+        System.out.println(x:"static method");
+    }
+
     void display(){
         System.out.println(x:"Parent class");
     }
@@ -20,8 +25,15 @@ Class Parent{
 
 class Child extends parent{
     @Override
+    void print(){
+        super.point();
+        System.out.println(x:"Parent class");
+
+    }
+    @Override
     void display(){
-        System.out.println(obj.add(a:1 , b:2));
+        Parent.print();
+        System.out.println(obj.add(x:"child class"));
 
         
     }
