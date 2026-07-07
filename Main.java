@@ -24,10 +24,24 @@ class Student extends School {
 
 }
 
+
+class Parent extends Student{
+    private String name ;
+    Parent(String name , String studentName){
+        super(studentName);
+        this.name = name;
+
+    }
+    void printParentName(){
+        System.out.println("Parent name:" + name);
+    }
+
+}
 public class Main{
     public static void main(String[] args) {
-        Student student = new Student (name : "abs");
-        student.printStudentName();
-        student.printSchoolName();
+        Parent parent = new Parent (name : "dad" , studentName : "abs");
+        parent.printParentName();
+        parent.printStudentName();
+        parent.printSchoolName();
     }
 }
