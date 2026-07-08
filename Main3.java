@@ -58,16 +58,6 @@ public class Main3 {
         Car manualCar = new ManualCar();
         manualCar.start();
         manualCar.noise();
-
-        System.out.println();
-
-        Car automaticCar = new AutomaticCar();
-        automaticCar.start();
-        automaticCar.noise();
-
-        System.out.println();
-        
-
         CarInterface.numberOfWheels();
     }
 }
