@@ -1,4 +1,3 @@
-
 abstract class Car {
     abstract public void start();
     
@@ -8,28 +7,39 @@ abstract class Car {
 }
 
 
-interface  CarInterface{
+interface CarInterface {
     public void start();
 
-    default void noise(){
-        System.out.println(x:"Noise...");
+    default void noise() {
+        System.out.println("Noise...");
     }
 
-    static int numberOfWheels(){
-        System.out.println(x:"Wheels : 4");
-    }
-}
-
-class ManualCar implements CarInterface{
-    public void start(){
-        System.out.println(x:"Manual car is starting");
+    
+    static void numberOfWheels() {
+        System.out.println("Wheels : 4");
     }
 }
 
 
-class ManualCar extends Car {
+abstract class Dealer extends Car {
+    int numberOfCars;
+    
+    public void start() {
+        System.out.println("Dealer car is starting");
+    }
+}
+
+
+class ManualCar extends Dealer implements CarInterface {
+    @Override
     public void start() {
         System.out.println("Manual car is starting"); 
+    }
+    
+    
+    @Override
+    public void noise() {
+        super.noise(); 
     }
     
     public void printName() {
@@ -54,6 +64,9 @@ public class Main3 {
         Car automaticCar = new AutomaticCar();
         automaticCar.start();
         automaticCar.noise();
+
+        System.out.println();
+        
 
         CarInterface.numberOfWheels();
     }
