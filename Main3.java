@@ -54,5 +54,7 @@ public class Main3 {
         Car automaticCar = new AutomaticCar();
         automaticCar.start();
         automaticCar.noise();
+
+        CarInterface.numberOfWheels();
     }
 }
