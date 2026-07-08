@@ -1,6 +1,7 @@
 import java.util.*;
 
 interface CarInterface{
+    static final int cnt =0;
     public void start();
     public void numberOfGears();
 
@@ -14,7 +15,8 @@ interface CarInterface{
 
 class ManualCar implements CarInterface{
     public void start(){
-        System.out.println(x:"Manual car is starting...")
+        airBags();
+        System.out.println(x:"Manual car is starting..." + doors);
     }
     public void numberOfGears{
         System.out.println(x:"Manual cas has 6 gears");
@@ -25,13 +27,17 @@ class ManualCar implements CarInterface{
     }
 }
 
-public class Mian3{
+interface SunRoof{
+    public void SunRoof();
+}
+
+public class Main4{
     public static void main(String[] args){
-        ManualCar manualCar = new ManualCar();
+        CarInterface manualCar = new manualCar;
         manualCar.start();
-        manualCar.numberOfGears();
-        manualCar.airBags();
-        manualCar.printVehicleType();
+        manualCar.numberOfGears();;
+        manualcar.sunRoof();
+
 
     }
 }
