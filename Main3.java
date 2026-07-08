@@ -8,8 +8,16 @@ abstract class Car {
 }
 
 
-class CarInterface{
+interface  CarInterface{
     public void start();
+
+    default void noise(){
+        System.out.println(x:"Noise...");
+    }
+
+    static int numberOfWheels(){
+        System.out.println(x:"Wheels : 4");
+    }
 }
 
 class ManualCar implements CarInterface{
