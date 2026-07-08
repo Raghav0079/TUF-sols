@@ -3,7 +3,7 @@ abstract class Car {
     abstract public void start();
     
     public void noise() {
-        System.out.println("Noise...."); // Fixed syntax and added semicolon
+        System.out.println("Noise...."); 
     }
 }
 
@@ -21,17 +21,17 @@ class ManualCar implements CarInterface{
 
 class ManualCar extends Car {
     public void start() {
-        System.out.println("Manual car is starting"); // Fixed syntax
+        System.out.println("Manual car is starting"); 
     }
     
     public void printName() {
-        System.out.println("Hey I am manual"); // Fixed syntax
+        System.out.println("Hey I am manual"); 
     }
 }
 
 class AutomaticCar extends Car {
     public void start() {
-        System.out.println("Automatic car is starting"); // Fixed syntax
+        System.out.println("Automatic car is starting"); 
     }
 }
 
