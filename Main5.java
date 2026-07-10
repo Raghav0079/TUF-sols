@@ -1,27 +1,21 @@
 
-class OuterClass{
-    static int  val = 10;
-    String name = "OuterClass";
+import java.util.ArrayList;
 
-    public void execute(){
-        final int x = 10;
 
-        class InnerClass(){
-            public void execute(){
-                System.out.println(x : "inner class executed" + name);
-            }
-        }
-        
-
-        InnerClass innerClass = new InnerClass();
-        InnerClass.execute();
-    }
-
-}
 
 public class Main5{
     public static void main(String[] args) {
-        OuterClass.InnerClass innerClass = new OuterClass().new InnerClass();
-        innerClass.execute();
+        ArrayList <Integer> list = new ArrayList<>(){
+            @Override
+            public boolean add(Integer val){
+                System.out.println("val is not added:" ++ val);
+                if( val % 2 == 1) return false;
+                return super.add(val);
+            }
+
+        }
+        list.add(e:18);
+        list.add(e:7);
+        System.out.println(list);
     }
 }
