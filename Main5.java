@@ -8,11 +8,16 @@ class OuterClass{
             System.out.println(x:"inner class executed");
         }
     }
+    public void execute(){
+        InnerClass innerClass = new InnerClass();
+        InnerClass.execute();
+
+    }
 }
 
 public class Main5{
     public static void main(String[] args) {
-        OuterClass.InnerClass innerClass = new OuterClass.InnerClass();
+        OuterClass outerClass = new OuterClass();
         innerClass.execute();
     }
 }
