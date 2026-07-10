@@ -5,19 +5,15 @@ class OuterClass{
 
     static class InnerClass{
         public void execute(){
-            System.out.println(x:"inner class executed");
+            System.out.println(x:"inner class executed" + name);
         }
     }
-    public void execute(){
-        InnerClass innerClass = new InnerClass();
-        InnerClass.execute();
 
-    }
 }
 
 public class Main5{
     public static void main(String[] args) {
-        OuterClass outerClass = new OuterClass();
+        OuterClass.InnerClass innerClass = new OuterClass().new InnerClass();
         innerClass.execute();
     }
 }
