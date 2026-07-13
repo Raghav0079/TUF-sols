@@ -1,14 +1,22 @@
-class Solution {
-public:
-    vector<int> toArray(Node* head) {
-        vector<int> result;
-        Node* curr = head; // Keep track of the current node
+/**
+ * Definition for doubly-linked list.
+ * class Node {
+ *     int val;
+ *     Node* prev;
+ *     Node* next;
+ *     Node() : val(0), next(nullptr), prev(nullptr) {}
+ *     Node(int x) : val(x), next(nullptr), prev(nullptr) {}
+ *     Node(int x, Node *prev, Node *next) : val(x), next(next), prev(prev) {}
+ * };
+ */
+vector<int> toArray(Node *head) {
+    vector<int> result;
+        Node* curr = head; 
         
         while (curr != nullptr) {
             result.push_back(curr->val);
-            curr = curr->next; // Move to the next node
+            curr = curr->next; 
         }
         
         return result;
-    }
-};
+}
