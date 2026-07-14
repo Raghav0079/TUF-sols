@@ -1,7 +1,15 @@
-class Passport{
-    STring passportNumber;
+class Passport implements Cloneable{
+    String passportNumber;
     Passport(String passportNumber){
         this.passportNumber = passportNumber;
+    }
+
+    @Override
+    protected Object clone() throws CloneNotSupportedException{
+        
+        Student student = (Student) super.clone();
+        student.passport = passport.clone();
+        return student;
     }
 }
 
@@ -16,7 +24,10 @@ class Student implements Cloneable{
 
     @Override
     protected Object clone() throws CloneNotSupportedException{
-        return super.clone();
+        
+        Student student = (Student) super.clone();
+        student.passport = passport.clone();
+        return student;
     }
 
 }
