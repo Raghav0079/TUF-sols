@@ -21,6 +21,8 @@ class Student{
 
 public class Main6{
     public static void main(String[] args) {
+        Passport passport = new Passport (name : "123456789");
+        Student student = new Student(name: "abs" , passport);
         
 
     }
