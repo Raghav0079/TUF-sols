@@ -27,5 +27,10 @@ public class Main{
         Student student = new Student (name : "abs" , passport);
 
         Student clonedStudent = (Student) student.clone();
+
+        System.out.println(student.name);
+        System.out.println(student.passport.passportNumber);
+        System.out.println(clonedStudent.name);
+        System.out.println(clonedStudent.passport.passportNumber);
     }
 }
