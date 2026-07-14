@@ -13,6 +13,12 @@ class Student{
     public void addCourse(Course course){
         courses.add(course);
     }
+
+    public void displayAllStudents() {
+        for(int  i =0 ; i<students.size() ; i++){
+            System.out.println("Name" + students.get(i).getName());
+        }
+    }
  
 }
 
@@ -48,8 +54,6 @@ public class Main6{
 
         abs.addCourse(math);
         abs.addCourse(cs);
-
-
 
     }
 }
