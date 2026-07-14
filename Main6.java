@@ -14,15 +14,15 @@ class Student{
 
     Student(String name , Passport passport ){
         this.name = name ;
-        this.passport = passport ;
+        this.passport = new Passport(passportNumber) ;
     }
 }
 
 
 public class Main6{
     public static void main(String[] args) {
-        Passport passport = new Passport (name : "123456789");
-        Student student = new Student(name: "abs" , passport);
+        
+        Student student = new Student(name: "abs" , passportNumber:"123456789");
         
 
     }
