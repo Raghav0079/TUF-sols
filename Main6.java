@@ -4,51 +4,51 @@ import java.util.*;
 
 class Student{
     private String name ;
-    private String id;
-
-    Student(String name , String id){
+    private List<Course> course;
+    Student(String name){
         this.name = name ;
-        this.id = id;
-
-    }
-    public void getName(){
-        return name;
-    }
-    public String getId(){
-        return id;
+        courses = new ArrayList<>();
     }
 
-    
-
+    public void addCourse(Course course){
+        courses.add(course);
+    }
+ 
 }
 
-class College{
-    private String name ;
-    private List<Student>  students;
-    College(String name){
+class Course{
+    private String name;
+    private List<Course> students;
+
+    Course(String name){
         this.name = name;
-        students = new ArrayList<>();
+        students = new ArrayList<> ();
     }
-    public static void addStudent(Student student) {
+
+    public void addStudent(Student student){
         students.add(student);
     }
-    public void printAllStudents(){
-        for(int i =0 ; i< students.size() ; i++){
-            Student student = students.get(i);
-            System.out.println("Name" + student.getName() + "id:" + student.getId());
+
+    public void displayAllStudents() {
+        for(int  i =0 ; i<students.size() ; i++){
+            System.out.println("Name" + students.get(i).getName());
         }
     }
 }
+
+
 public class Main6{
     public static void main(String[] args) {
-        Student student1 = new Student(name:"aabs" , id :"1");
-        Student student2 = new Student(name:"abbs" , id :"2");
+        Course maths = new Course(name:"Math");
+        Course cs = new Course(name:"CS");
 
-        College college = new College(name : "JKL");
-        college.addStudent(student1);
-        college.addStudent(student2);
+        Student abs = new Student(name : "abs");
+        Student abc = new Student(name : "abc");
+        Student abj = new Student(name : "abj");
 
-        college.printAllStudents();
+        abs.addCourse(math);
+        abs.addCourse(cs);
+
 
 
     }
