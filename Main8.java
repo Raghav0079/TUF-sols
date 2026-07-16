@@ -1,20 +1,24 @@
+class SelfMadeException extends Exception {
+    SelfMadeException(String message) {
+        super(message); // Passes the message to the parent Exception class
+        System.out.println("I was created!"); 
+    }
+}
+
 public class Main8 {
     
-    // Fixed: Added 'void' return type and specified 'Exception' after throws
-    private static void readFile() throws Exception {
-        // Simulating an error by explicitly throwing an exception
-        throw new Exception("Something went wrong while reading the file!");
+    private static void readFile() throws SelfMadeException {
+        
+        throw new SelfMadeException("Custom Error: File path is empty."); 
     }
 
     public static void main(String[] args) {
         try {
-            System.out.println("Attempting to read file...");
-            readFile(); // This triggers the exception
+            readFile();
+        } catch (SelfMadeException e) { 
+            System.out.println("Caught custom exception: " + e.getMessage());
         } catch (Exception e) {
-            // Handling the exception propagated from readFile()
-            System.err.println("Caught exception in main: " + e.getMessage());
+            System.out.println("Caught general exception: " + e.getMessage());
         }
-        
-        System.out.println("Program continues executing normally.");
     }
 }
