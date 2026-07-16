@@ -7,12 +7,20 @@ public class Main8{
         arr.add(e:15);
 
         try {
+            int x = 2/0 ;
             System.out.println(arr.get(index:5));
             
-        } catch (IndexOutOfBoundsException e) {
+        } catch (ArithmeticException e) {
             System.out.println(x:"Exception occurred at line 10" + e.getMessage());
         }
-        System.out.println(x:"hi");
+        catch(IndexOutOfBoundsException e){
+            System.out.println(e.getMessage());
+
+        }
+
+        System.out.println(x:"Hi");
+
+
 
 
 
