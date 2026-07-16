@@ -1,63 +1,49 @@
-abstract class Car {
-    abstract public void start();
-    
-    public void noise() {
-        System.out.println("Noise...."); 
+import java.util.*;
+class Calculator{
+    int add ( int a , int b){
+        return a + b ;
+    }
+    double add(double a , double b ){
+        return a +b;
+    }
+    int add(int a , int b , int c){
+        return a +b + c;
     }
 }
 
 
-interface CarInterface {
-    public void start();
+Class Parent{
 
-    default void noise() {
-        System.out.println("Noise...");
+    static void print(){
+        System.out.println(x:"static method");
     }
 
-    
-    static void numberOfWheels() {
-        System.out.println("Wheels : 4");
+    void display(){
+        System.out.println(x:"Parent class");
     }
 }
 
-
-abstract class Dealer extends Car {
-    int numberOfCars;
-    
-    public void start() {
-        System.out.println("Dealer car is starting");
-    }
-}
-
-
-class ManualCar extends Dealer implements CarInterface {
+class Child extends parent{
     @Override
-    public void start() {
-        System.out.println("Manual car is starting"); 
+    void print(){
+        super.point();
+        System.out.println(x:"Parent class");
+
     }
-    
-    
     @Override
-    public void noise() {
-        super.noise(); 
-    }
-    
-    public void printName() {
-        System.out.println("Hey I am manual"); 
+    void display(){
+        Parent.print();
+        System.out.println(obj.add(x:"child class"));
+
+        
     }
 }
+public class Main{
+    public static void main(String [] args){
+        Calculator obj = new Calculator();
+        System.out.println(obj.add(a:1 , b: 2));
 
-class AutomaticCar extends Car {
-    public void start() {
-        System.out.println("Automatic car is starting"); 
-    }
-}
-
-public class Main3 {
-    public static void main(String[] args) {
-        Car manualCar = new ManualCar();
-        manualCar.start();
-        manualCar.noise();
-        CarInterface.numberOfWheels();
+        Child child = new Child();
+        child.display();
     }
 }
