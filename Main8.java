@@ -9,13 +9,12 @@ public class Main8{
         try {
             System.out.println(arr.get(index:5));
             
-        } catch (Exception e) {
+        } catch (IndexOutOfBoundsException e) {
             System.out.println(x:"Exception occurred at line 10" + e.getMessage());
         }
         System.out.println(x:"hi");
 
 
-        
 
     }
 }
