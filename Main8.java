@@ -1,32 +1,20 @@
+public class Main8 {
+    
+    // Fixed: Added 'void' return type and specified 'Exception' after throws
+    private static void readFile() throws Exception {
+        // Simulating an error by explicitly throwing an exception
+        throw new Exception("Something went wrong while reading the file!");
+    }
 
-public class Main8{
-    public static void main(String[] args){
-        
+    public static void main(String[] args) {
         try {
-            // trying to access a file 
-            // data connection 
-
-
-            // last line
-            
+            System.out.println("Attempting to read file...");
+            readFile(); // This triggers the exception
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+            // Handling the exception propagated from readFile()
+            System.err.println("Caught exception in main: " + e.getMessage());
         }
-        finally{
-            // close this db connection 
-
-            try {
-                // close the db connection 
-            } catch (Exception e) {
-                System.out.println(x:"db connection was  not closed")
-            }
-        }
-
         
-
-
-
-
-
+        System.out.println("Program continues executing normally.");
     }
 }
