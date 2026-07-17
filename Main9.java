@@ -1,11 +1,16 @@
 import java.util.*;
 
 public class Main9 {
+    
+    public static <T> void printArray(T[] arr){
+        for(T val : arr){
+            System.out.print(val + " ");
+        }
+        System.out.println();
+    }
     public static void main(String[] args) {
-        ExampleGenerics<Integer> obj = new ExampleGenerics<>();
-        obj.add(10);
-        System.out.println(obj.getElement(0));
-        obj.removeLast();
+        Integer[] arr = {1,6,7};
+        printArray(arr);
     }
 }
 
