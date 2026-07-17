@@ -9,8 +9,9 @@ public class Main9 {
         System.out.println();
     }
     public static void main(String[] args) {
-        Integer[] arr = {1,6,7};
-        printArray(arr);
+        Calculator<Integer> obj = new Calculator<Integer>();
+        System.out.println(obj.add(1, 2));
+        System.out.println(obj.add(1, 2));
     }
 }
 
@@ -19,6 +20,12 @@ class GenericMethod {
         for ( T val : arr){
             System.out.print(val + " ");
         }
+    }
+}
+
+class Calculator<T extends Number> {
+    public double add(T a , T b){
+        return a.doubleValue() + b.doubleValue();
     }
 }
 
