@@ -14,6 +14,14 @@ public class Main9 {
     }
 }
 
+class GenericMethod {
+    public <T> void printArray(T[] arr){
+        for ( T val : arr){
+            System.out.print(val + " ");
+        }
+    }
+}
+
 class ExampleGenerics<T> {
     private List<T> list = new ArrayList<>();
 
