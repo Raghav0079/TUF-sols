@@ -2,16 +2,23 @@ import java.util.*;
 
 public class Main9 {
     
-    public static <T> void printArray(T[] arr){
-        for(T val : arr){
+
+    public static <T> void printArray(List<T> list){
+        for(T val : list){
             System.out.print(val + " ");
         }
         System.out.println();
     }
+    
     public static void main(String[] args) {
-        Calculator<Integer> obj = new Calculator<Integer>();
-        System.out.println(obj.add(1, 2));
-        System.out.println(obj.add(1, 2));
+        List<Integer> ls = new ArrayList<>();
+        ls.add(10);
+        ls.add(100);
+        printArray(ls);
+        
+        
+        ls.add(90); 
+        printArray(ls);
     }
 }
 
