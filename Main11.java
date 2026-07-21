@@ -1,26 +1,27 @@
 import java.util.ArrayList;
 import java.util.List;
 
-class MemoryLeakExample{
-    private  static List<Object> staticList = new ArrayList<>();
+class MemoryLeakExample {
+    private List<Object> list = new ArrayList<>();
 
-    public void addToStaticList(Object obj){
-        staticList.add(obj);
+    public void addToList(Object obj) {
+        list.add(obj);
     }
 
+    public void clearList() {
+        list.clear();
+    }
 }
 
-public class Main{
+public class Main11 {
     public static void main(String[] args) {
         MemoryLeakExample example = new MemoryLeakExample();
 
-        for(int i=0 ; i < 100000 ; i++){
-            example.addToStaticList(new Object());
-
+        for (int i = 0; i < 100000; i++) {
+            example.addToList(new Object());
         }
 
-        System.out.println(x:"objects added to static list");
-
+        System.out.println("objects added to list");
+        example.clearList();
     }
-    
 }
