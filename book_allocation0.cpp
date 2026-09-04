@@ -1,0 +1,66 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
+private:
+    /* Function to count the number of 
+    students required given the maximum 
+    pages each student can read */
+    int countStudents(vector<int>& nums, int pages) {
+        // Size of array
+        int n = nums.size();
+        
+        int students = 1;
+        int pagesStudent = 0;
+        
+        for (int i = 0; i < n; i++) {
+            if (pagesStudent + nums[i] <= pages) {
+                // Add pages to current student
+                pagesStudent += nums[i];
+            } else {
+                // Add pages to next student
+                students++;
+                pagesStudent = nums[i];
+            }
+        }
+        return students;
+    }
+public:
+    /*Function to allocate the book to ‘m’ 
+    students such that the maximum number 
+    of pages assigned to a student is minimum */
+    int findPages(vector<int>& nums, int m) {
+        int n = nums.size();
+        
+        // Book allocation impossible
+        if (m > n) return -1;
+
+        // Calculate the range for binary search
+        int low = *max_element(nums.begin(), nums.end());
+        int high = accumulate(nums.begin(), nums.end(), 0);
+
+        // Linear search for minimum maximum pages
+        for (int pages = low; pages <= high; pages++) {
+            if (countStudents(nums, pages) <= m) {
+                return pages;
+            }
+        }
+        return low;
+    }
+};
+
+int main() {
+    vector<int> arr = {25, 46, 28, 49, 24};
+    int n = 5; 
+    int m = 4;
+
+    // Create an instance of the Solution class
+    Solution sol;
+
+    int ans = sol.findPages(arr, m);
+
+    // Output the result
+    cout << "The answer is: " << ans << "\n";
+
+    return 0;
+}
