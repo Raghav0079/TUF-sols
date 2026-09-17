@@ -1,3 +1,6 @@
+#include <bits/stdc++.h>
+using namespace std;
+
 class Solution {
 private:
     // Function to calculate power of 'x' raised to 'n'
@@ -33,14 +36,8 @@ public:
     }
 };
 
-
-
-
 int main() {
     Solution sol;
-    // Output: 1024.0000
-    printf("%.4f\n", sol.myPow(2.0000, 10));
-    // Output: 0.2500 
-    printf("%.4f\n", sol.myPow(2.0000, -2)); 
+    cout << sol.myPow(2.0, 10) << endl; // Expected: 1024
     return 0;
 }
