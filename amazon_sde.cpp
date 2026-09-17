@@ -50,3 +50,6 @@ int main() {
 	cout<<answer;
 	return 0;
 }
+
+/*Given an array of size “N” , find the subarray whose sum is maximum but at the same time size of that subarray should be divisible by “k” 
+*/
