@@ -3,12 +3,7 @@ import java.util.List;
 
 class Solution {
     public List<String> generateParenthesis(int n) {
-        /**
-         * Generates all combinations of n pairs of balanced parentheses.
-         *
-         * @param n The number of pairs of parentheses.
-         * @return A list containing all valid combinations of parentheses.
-         */
+
         List<String> result = new ArrayList<>();
         // Start the recursive generation with initial values
         backtrack(0, 0, n, "", result);
@@ -16,16 +11,7 @@ class Solution {
     }
 
     private void backtrack(int open, int close, int n, String current, List<String> result) {
-        /**
-         * A recursive helper function to generate all combinations
-         * of balanced parentheses.
-         *
-         * @param open The number of open parentheses used so far.
-         * @param close The number of close parentheses used so far.
-         * @param n The total number of pairs of parentheses.
-         * @param current The current string being built.
-         * @param result The list storing all valid combinations.
-         */
+
         // Base case: if the number of open and close parentheses used
         // is equal to the total number of pairs, add the string to the result.
         if (open == close && open + close == 2 * n) {
@@ -46,7 +32,7 @@ class Solution {
         }
     }
 
-    public static void main1(String[] args) {
+    public static void gen_paren(String[] args) {
         Solution sol = new Solution();
         int n = 3; // Example input
         List<String> result = sol.generateParenthesis(n);
