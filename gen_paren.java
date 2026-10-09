@@ -31,7 +31,6 @@ class Solution {
             backtrack(open, close + 1, n, current + ')', result);
         }
     }
-
     public static void gen_paren(String[] args) {
         Solution sol = new Solution();
         int n = 3; // Example input
