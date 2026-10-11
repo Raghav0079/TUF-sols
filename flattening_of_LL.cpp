@@ -1,3 +1,28 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+// Definition of special linked list
+struct ListNode {
+    int val;
+    ListNode *next;
+    ListNode *child;
+    ListNode() {
+        val = 0;
+        next = NULL;
+        child = NULL;
+    }
+    ListNode(int data1) {
+        val = data1;
+        next = NULL;
+        child = NULL;
+    }
+    ListNode(int data1, ListNode *next1, ListNode* next2) {
+        val = data1;
+        next = next1;
+        child = next1;
+    }
+};
+
 class Solution {
 private:
     /* Merge the two linked lists in a particular
@@ -85,4 +110,36 @@ void printOriginalLinkedList(ListNode* head, int depth) {
         }
         head = head->next;
     }
+}
+
+int main() {
+    // Create a linked list with child pointers
+    ListNode* head = new ListNode(5);
+    head->child = new ListNode(14);
+
+    head->next = new ListNode(10);
+    head->next->child = new ListNode(4);
+
+    head->next->next = new ListNode(12);
+    head->next->next->child = new ListNode(20);
+    head->next->next->child->child = new ListNode(13);
+
+    head->next->next->next = new ListNode(7);
+    head->next->next->next->child = new ListNode(17);
+
+    // Print the original linked list structure
+    cout << "Original linked list:" << endl;
+    printOriginalLinkedList(head, 0);
+
+    // Creating an instance of Solution class
+    Solution sol;
+    
+    // Function call to flatten the linked list
+    ListNode* flattened = sol.flattenLinkedList(head);
+    
+    // Printing the flattened linked list
+    cout << "\nFlattened linked list: ";
+    printLinkedList(flattened);
+
+    return 0;
 }
