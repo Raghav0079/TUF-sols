@@ -54,7 +54,8 @@ class Book {
     }
 }
 
-public class Main {
+
+public class encapsulation {
     public static void main(String[] args) {
         List<String> title = Arrays.asList(
             "Sherlock_Holmes",
