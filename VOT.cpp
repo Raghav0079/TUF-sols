@@ -11,9 +11,11 @@ struct TreeNode {
 
 class Solution{
     vector<vector<int>> result;
-    if( root == nullptr){
-        return result;
-    }
+public:
+    vector<vector<int>> verticalTraversal(TreeNode* root) {
+        if( root == nullptr){
+            return result;
+        }
 
     map<int, map<int, priority_queue<int, vector<int>, greater<int>>>> nodesMap;
     queue<pair<TreeNode*, pair<int, int>>> q;
