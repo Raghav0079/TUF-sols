@@ -1,3 +1,6 @@
+#include <bits/stdc++.h>
+using namespace std;
+
 /* Define P as a shorthand for
 the pair<int, pair<int,int>> type */
 #define P pair <int, pair<int,int>>
@@ -5,6 +8,8 @@ the pair<int, pair<int,int>> type */
 class Solution {
 public:
     
+    /* Function to find cheapest price from 
+    src to dst with at most k stops */
     int CheapestFlight(int n, vector<vector<int>>& flights, 
                        int src, int dst, int k) {
         
@@ -19,7 +24,8 @@ public:
         // To store minimum distance
         vector<int> minDist(n, 1e9);
         minDist[src] = 0;
-
+        /* Queue storing the elements of 
+        the form {stops, {node, dist}} */
         queue <P> q;
         
         // Add the source to the queue
@@ -35,6 +41,8 @@ public:
             int node = p.second.first; // node
             int dist = p.second.second; // distance
             
+            /* If the number of stops taken exceed k,
+            skip and move to the next element */
             if(stops > k) continue;
             
             // Traverse all the neighbors
@@ -43,6 +51,10 @@ public:
                 int adjNode = it.first; // Adjacent node
                 int edgeWt = it.second; // Edge weight
                 
+                /* If the tentative distance to 
+                reach adjacent node is smaller 
+                than the known distance and number 
+                of stops doesn't exceed k */
                 if(dist + edgeWt < minDist[adjNode] && 
                    stops <= k) {
                        
@@ -55,7 +67,8 @@ public:
             }
         }
         
-
+        /* If the destination is 
+        unreachable, return -1 */
         if(minDist[dst] == 1e9) 
             return -1;
         
@@ -63,7 +76,6 @@ public:
         return minDist[dst];
     }
 };
-
 
 int main() {
     int n = 4;
