@@ -63,18 +63,3 @@ public:
         return func(nums, (totSum - target) / 2);
     }
 };
-
-int main() {
-    vector<int> nums = {1, 2, 3, 1};
-    int target = 3;
-    int n = nums.size(); 
-    
-    //Create an instance of Solution class
-    Solution sol;
-
-    // Print the result
-    cout << "The total number of ways is " << sol.targetSum(n, target, nums) << endl;
-
-    return 0; 
-}
-
