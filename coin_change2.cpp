@@ -31,17 +31,18 @@ public:
 };
 
 
-
 int main() {
-   vector<int> coins = {1, 2, 3};
-    int amount = 4;
-    int N = coins.size(); 
-    
-    //Create an instance of Solution class
-    Solution sol;
+    int n, amount;
+    cin >> n >> amount;
+    vector<int> coins(n);
+    for (int i = 0; i < n; i++) {
+        cin >> coins[i];
+    }
 
-    // Print the result
-    cout << "The total number of ways is " << sol.count(coins, N, amount) << endl;
+    Solution solution;
+    int result = solution.count(coins, n, amount);
+    cout << result << endl;
 
-    return 0; 
+    return 0;
 }
+
