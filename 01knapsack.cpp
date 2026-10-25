@@ -1,3 +1,6 @@
+#include<bits/stdc++.h>
+using namespace std;
+
 class Solution{
     public:
         int knapsack01(vector<int>& wt, vector<int>& val, int n, int W) {
